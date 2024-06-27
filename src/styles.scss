@@ -1,1 +1,38 @@
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+    --color-core-foreground: #0A0A0A;
+    --color-core-background: #1F1F1F;
+    --color-core-content: #FAFAFA;
+    --color-core-content-low: #A4A4A4;
+    --color-core-border: #3D3D3D;
+    --color-neutral-surface: #FFFFFF;
+    --color-neutral-surface-lower: #1F1F1F;
+    --color-neutral-content-high: #CACACA;
+    --color-neutral-content: #A4A4A4;
+
+    --measure-radius-s: 12px;
+    --measure-radius-null: 0;
+    --measure-radius-circle: 100px;
+    --measure-sizing-xxxl: 48px;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background: var(--color-core-background);
+}
+
+.mat-toolbar.mat-primary {
+    background: var(--color-core-background);
+    color: #fff;
+}
+
+.mdc-list-item__primary-text {
+    color: var(--color-core-content) !important;
+}

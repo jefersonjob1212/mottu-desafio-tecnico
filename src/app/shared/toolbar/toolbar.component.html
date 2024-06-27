@@ -1,0 +1,20 @@
+<mat-toolbar>
+    <img src="../assets/logo.png" width="114" height="64" (click)="goHome()">
+    <span class="spacer"></span>
+    <mat-button-toggle-group [hideSingleSelectionIndicator]="true">
+        <mat-button-toggle routerLink="/" routerLinkActive="checked mat-button-toggle-checked"
+            [routerLinkActiveOptions]="{ exact: true }" #homeLink="routerLinkActive">
+            <mat-icon fontIcon="home"></mat-icon>
+            <span class="description">Início</span>
+        </mat-button-toggle>
+        <mat-button-toggle routerLink="/favorites" routerLinkActive="checked mat-button-toggle-checked"
+            [routerLinkActiveOptions]="{ exact: true }" #favoriteLink="routerLinkActive"
+            [class.active]="favoriteLink.isActive">
+            <mat-icon fontIcon="favorite"></mat-icon>
+            <span class="description">Favoritos</span>            
+            <span class="badge text-bg-light rounded" [ngClass]="{ 'text-bg-dark' : favoriteLink.isActive }">
+                {{ counter$ | async }}
+            </span>
+        </mat-button-toggle>
+    </mat-button-toggle-group>
+</mat-toolbar>

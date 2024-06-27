@@ -1,0 +1,30 @@
+.spacer {
+    flex: 1 1 auto;
+}
+
+img {
+    cursor: pointer;
+}
+
+mat-toolbar {
+    background-color: var(--color-core-foreground);
+}
+
+mat-button-toggle-group {
+    border-color: var(--color-core-border);
+}
+
+mat-button-toggle {
+    background-color: transparent;
+    color: var(--color-neutral-content);
+}
+
+.checked .mat-button-toggle-checked {
+    background-color: var(--color-neutral-surface) !important;
+}
+
+@media (max-width: 768px) {
+    .description {
+        display: none;
+    }
+}

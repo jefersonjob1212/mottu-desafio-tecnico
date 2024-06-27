@@ -1,12 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
-
+import { ToolbarComponent } from './shared/toolbar/toolbar.component';
 @Component({
-  selector: 'app-root',
+  selector: 'mottu-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, ToolbarComponent],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrl: './app.component.scss',
 })
 export class AppComponent {
   title = 'mottu-teste-tecnico';

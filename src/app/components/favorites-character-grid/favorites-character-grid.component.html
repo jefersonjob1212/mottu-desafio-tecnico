@@ -1,0 +1,54 @@
+<div class="container w-50 mt-5">
+    <div class="d-flex justify-content-between">
+        <span class="title">Favoritos</span>
+    </div>
+</div>
+@if (isEmpty) {
+<div class="d-flex justify-content-center align-items-center h-75">
+    <div class="d-flex flex-column content-empty justify-content-center align-items-center w-50 h-100 mt-5">
+        <span class="title-not-found">Nada foi encontrado</span>
+        <span class="subtitle-not-found">Tente realizar uma nova busca</span>
+    </div>
+
+</div>
+} @else {
+<div class="d-flex justify-content-center h-75">
+    <div class="character-grid ms-5 ps-5">
+        @if(singleFavorite?.id) {
+            <div class="character-grid-item m-3">
+                <mat-card>
+                    <div class="favorite favorite-checked" (click)="removeToFavorites(singleFavorite!.id, singleFavorite!.name)">
+                        <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+                    </div>
+                    <img [src]="singleFavorite?.image" [alt]="singleFavorite?.name" width="224" height="224">
+                    <mat-card-content>
+                        <div class="d-flex flex-column">
+                            <span class="character-name">{{singleFavorite?.name}}</span>
+                            <span class="character-specie-type">{{singleFavorite?.species}}</span>
+                            <span class="character-specie-type">{{singleFavorite?.type}}</span>
+                        </div>
+                    </mat-card-content>
+                </mat-card>
+            </div>
+        } @else {
+            @for (item of favoritesData; track $index) {
+                <div class="character-grid-item m-3">
+                    <mat-card>
+                        <div class="favorite favorite-checked" (click)="removeToFavorites(item.id, item.name)">
+                            <fa-icon [icon]="['fas', 'heart']"></fa-icon>
+                        </div>
+                        <img [src]="item.image" [alt]="item.name" width="224" height="224">
+                        <mat-card-content>
+                            <div class="d-flex flex-column">
+                                <span class="character-name">{{item.name}}</span>
+                                <span class="character-specie-type">{{item.species}}</span>
+                                <span class="character-specie-type">{{item.type}}</span>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </div>
+                }
+        }
+    </div>
+</div>
+}

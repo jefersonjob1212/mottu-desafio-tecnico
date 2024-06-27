@@ -1,0 +1,45 @@
+mat-dialog-content {
+    background: var(--color-core-background);
+}
+
+mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    background-color: var(--color-core-foreground) !important;
+}
+
+.mat-mdc-dialog-title {
+    background: var(--color-core-background);
+    font-family: Creepster;
+    color: var(--color-core-content);
+    margin: 0 !important;
+}
+
+mat-card {
+    background-color: var(--color-core-foreground);
+    border: 1px solid var(--color-core-border);
+    border-radius: var(--measure-radius-s);
+    color: var(--color-core-content);
+}
+
+img {
+    border-radius: var(--measure-radius-s) var(--measure-radius-s) 0 0;
+}
+
+.character-specie-type {
+    font-family: Poppins;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22.4px;
+    text-align: left;
+    color: var(--color-core-content-low);
+}
+
+mat-divider {
+    border-top-style: solid !important;
+    border-top-color: var(--color-neutral-surface) !important;
+}
+
+.mdc-list-item__primary-text {
+    color: var(--color-core-content) !important;
+}

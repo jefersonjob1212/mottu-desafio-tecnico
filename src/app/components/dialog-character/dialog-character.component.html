@@ -1,0 +1,32 @@
+<h2 matDialogTitle>{{ character.name }}</h2>
+<mat-dialog-content>
+    <mat-card>
+        <img [src]="character.image" [alt]="character.name" width="224" height="224">
+        <mat-card-content>
+            <div class="d-flex flex-column">
+                <span class="character-specie-type">{{character.species}}</span>
+                <span class="character-specie-type">{{character.type}}</span>
+                <mat-list>
+                    <mat-list-item class="text-wrap">
+                        <strong>Origem: </strong>
+                        {{character.origin?.name}}
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <strong>Localidade: </strong>
+                        {{character.location?.name}}
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                    <mat-list-item>
+                        <strong>Quantidade de episódios: </strong>
+                        {{character.episode.length}}
+                    </mat-list-item>
+                    <mat-divider></mat-divider>
+                </mat-list>
+            </div>
+        </mat-card-content>
+    </mat-card>
+</mat-dialog-content>
+<mat-dialog-actions>
+    <button mat-flat-button [color]="'secondary'" (click)="dialogRef.close()">Fechar</button>
+</mat-dialog-actions>
