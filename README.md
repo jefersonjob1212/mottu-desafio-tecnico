@@ -5,7 +5,9 @@ Projeto serve para minha avaliação como candidato.
 
 ## Development server
 
-Após baixar esse projeto, execute o comando `ng serve` ou `npm start` para executar o projeto. Acesse o link `http://localhost:4200/`. A aplicação proposta estará em execução com o layout sugerido
+Após baixar esse projeto, execute o comando `npm install` para instalar as dependências do projeto.
+Em seguida, execute o comando `ng serve` ou `npm start` para executar o projeto. 
+Acesse o link `http://localhost:4200/` para visualizar a aplicação proposta, que será executada com o layout sugerido.
 
 ## Responsividade
 
